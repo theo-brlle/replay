@@ -1,0 +1,19 @@
+// Channels
+
+"CHANNEL_TF1_TITLE" = "TF1";
+"CHANNEL_TMC_TITLE" = "TMC";
+"CHANNEL_TFX_TITLE" = "TFX";
+"CHANNEL_TF1_SERIES_FILMS_TITLE" = "TF1 Séries Films";
+
+// Program Categories
+
+"CATEGORY_SERIES_AND_FICTIONS_TITLE" = "Séries & Fictions";
+"CATEGORY_ENTERTAINEMENT_TITLE" = "Divertissements";
+"CATEGORY_INFOS_MAGAZINE_SPORTS_TITLE" = "Infos, Mag & Sport";
+"CATEGORY_YOUTH_TITLE" = "Jeunesse";
+
+// Video Types
+
+"TYPE_REPLAY_TITLE" = "Replay";
+"TYPE_EXTRACT_TITLE" = "Extrait";
+"TYPE_EXCLU_TITLE" = "Exclu";
