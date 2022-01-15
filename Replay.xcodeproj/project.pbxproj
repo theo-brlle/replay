@@ -7,25 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E4A318212780F53A00F90F99 /* SharedModule in Frameworks */ = {isa = PBXBuildFile; productRef = E4A318202780F53A00F90F99 /* SharedModule */; };
-		E4A3182427821A5F00F90F99 /* RPCoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = E4A3182327821A5F00F90F99 /* RPCoreUI */; };
+		E48689DE278A509D006CFE32 /* RPCoreModule in Frameworks */ = {isa = PBXBuildFile; productRef = E48689DD278A509D006CFE32 /* RPCoreModule */; };
+		E48689E2278A5377006CFE32 /* RPUIModule in Frameworks */ = {isa = PBXBuildFile; productRef = E48689E1278A5377006CFE32 /* RPUIModule */; };
+		E48689E5278CE6E1006CFE32 /* MYTF1Module in Frameworks */ = {isa = PBXBuildFile; productRef = E48689E4278CE6E1006CFE32 /* MYTF1Module */; };
 		E4D5D773277E555B00401093 /* ReplayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5D772277E555B00401093 /* ReplayApp.swift */; };
 		E4D5D777277E555D00401093 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D5D776277E555D00401093 /* Assets.xcassets */; };
 		E4D5D77A277E555D00401093 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D5D779277E555D00401093 /* Preview Assets.xcassets */; };
 		E4D5D784277E588000401093 /* MainModule in Frameworks */ = {isa = PBXBuildFile; productRef = E4D5D783277E588000401093 /* MainModule */; };
-		E4DEE307277E5DE800B66681 /* MYTF1Module in Frameworks */ = {isa = PBXBuildFile; productRef = E4DEE306277E5DE800B66681 /* MYTF1Module */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E4A3181F2780F50C00F90F99 /* SharedModule */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SharedModule; sourceTree = "<group>"; };
-		E4A318222782186500F90F99 /* RPCoreUI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = RPCoreUI; sourceTree = "<group>"; };
+		E48689DC278A5056006CFE32 /* RPCoreModule */ = {isa = PBXFileReference; lastKnownFileType = folder; path = RPCoreModule; sourceTree = "<group>"; };
+		E48689E0278A52C5006CFE32 /* RPUIModule */ = {isa = PBXFileReference; lastKnownFileType = folder; path = RPUIModule; sourceTree = "<group>"; };
 		E4D5D76F277E555B00401093 /* Replay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Replay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D5D772277E555B00401093 /* ReplayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplayApp.swift; sourceTree = "<group>"; };
 		E4D5D776277E555D00401093 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4D5D779277E555D00401093 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4D5D781277E582800401093 /* MainModule */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MainModule; sourceTree = "<group>"; };
 		E4DEE305277E5DC900B66681 /* MYTF1Module */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MYTF1Module; sourceTree = "<group>"; };
-		E4DEE30A277E6D9900B66681 /* ExtendedFoundation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ExtendedFoundation; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,16 +32,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4DEE307277E5DE800B66681 /* MYTF1Module in Frameworks */,
-				E4A3182427821A5F00F90F99 /* RPCoreUI in Frameworks */,
+				E48689DE278A509D006CFE32 /* RPCoreModule in Frameworks */,
 				E4D5D784277E588000401093 /* MainModule in Frameworks */,
-				E4A318212780F53A00F90F99 /* SharedModule in Frameworks */,
+				E48689E5278CE6E1006CFE32 /* MYTF1Module in Frameworks */,
+				E48689E2278A5377006CFE32 /* RPUIModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E48689E3278A53B2006CFE32 /* Channels */ = {
+			isa = PBXGroup;
+			children = (
+				E4DEE305277E5DC900B66681 /* MYTF1Module */,
+			);
+			path = Channels;
+			sourceTree = "<group>";
+		};
 		E4D5D766277E555B00401093 = {
 			isa = PBXGroup;
 			children = (
@@ -64,11 +71,10 @@
 			isa = PBXGroup;
 			children = (
 				E4D5D772277E555B00401093 /* ReplayApp.swift */,
-				E4A3181F2780F50C00F90F99 /* SharedModule */,
+				E48689DC278A5056006CFE32 /* RPCoreModule */,
+				E48689E0278A52C5006CFE32 /* RPUIModule */,
 				E4D5D781277E582800401093 /* MainModule */,
-				E4DEE305277E5DC900B66681 /* MYTF1Module */,
-				E4A318222782186500F90F99 /* RPCoreUI */,
-				E4DEE308277E6B9100B66681 /* Extensions */,
+				E48689E3278A53B2006CFE32 /* Channels */,
 				E4D5D780277E56CD00401093 /* Resources */,
 				E4D5D778277E555D00401093 /* Preview Content */,
 			);
@@ -98,14 +104,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E4DEE308277E6B9100B66681 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E4DEE30A277E6D9900B66681 /* ExtendedFoundation */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,9 +122,9 @@
 			name = Replay;
 			packageProductDependencies = (
 				E4D5D783277E588000401093 /* MainModule */,
-				E4DEE306277E5DE800B66681 /* MYTF1Module */,
-				E4A318202780F53A00F90F99 /* SharedModule */,
-				E4A3182327821A5F00F90F99 /* RPCoreUI */,
+				E48689DD278A509D006CFE32 /* RPCoreModule */,
+				E48689E1278A5377006CFE32 /* RPUIModule */,
+				E48689E4278CE6E1006CFE32 /* MYTF1Module */,
 			);
 			productName = Replay;
 			productReference = E4D5D76F277E555B00401093 /* Replay.app */;
@@ -381,21 +379,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E4A318202780F53A00F90F99 /* SharedModule */ = {
+		E48689DD278A509D006CFE32 /* RPCoreModule */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = SharedModule;
+			productName = RPCoreModule;
 		};
-		E4A3182327821A5F00F90F99 /* RPCoreUI */ = {
+		E48689E1278A5377006CFE32 /* RPUIModule */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = RPCoreUI;
+			productName = RPUIModule;
+		};
+		E48689E4278CE6E1006CFE32 /* MYTF1Module */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MYTF1Module;
 		};
 		E4D5D783277E588000401093 /* MainModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MainModule;
-		};
-		E4DEE306277E5DE800B66681 /* MYTF1Module */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = MYTF1Module;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
