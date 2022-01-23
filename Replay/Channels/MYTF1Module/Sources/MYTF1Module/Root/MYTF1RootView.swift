@@ -6,7 +6,7 @@ public struct MYTF1RootView: View {
     
     public var body: some View {
         TabView {
-            TF1TabView()
+            TF1ProgramListView()
                 .tabItem {
                     Text("CHANNEL_TF1_TITLE".localized(from: .module))
                 }

@@ -2,13 +2,13 @@ import SwiftUI
 import RPCoreModule
 import RPUIModule
 
-struct ProgramDetailsView: View {
+struct TF1ProgramDetailsView: View {
     @Environment(\.colorScheme) var colorScheme
     
-    @StateObject var viewModel: ProgramDetailsViewModel
+    @StateObject var viewModel: TF1ProgramDetailsViewModel
     
     init(programSlug: String) {
-        self._viewModel = StateObject(wrappedValue: ProgramDetailsViewModel(programSlug: programSlug))
+        self._viewModel = StateObject(wrappedValue: TF1ProgramDetailsViewModel(programSlug: programSlug))
     }
     
     var body: some View {
@@ -20,9 +20,23 @@ struct ProgramDetailsView: View {
                             VStack(spacing: 0) {
                                 Spacer(minLength: container.size.height * 0.65)
                                 LazyVStack {
-                                    VideoCarouselView(title: "TYPE_REPLAY_TITLE".localized(from: .module), videos: viewModel.replayVideos)
-                                    VideoCarouselView(title: "TYPE_EXTRACT_TITLE".localized(from: .module), videos: viewModel.extractVideos)
-                                    VideoCarouselView(title: "TYPE_EXCLU_TITLE".localized(from: .module), videos: viewModel.excluVideos)
+                                    CarouselView(title: "TYPE_REPLAY_TITLE".localized(from: .module),
+                                                 items: viewModel.replayVideos,
+                                                 type: .fourColumns) { videoStreamID in
+                                        VideoPlayerView(streamID: videoStreamID)
+                                    }
+                                    
+                                    CarouselView(title: "TYPE_EXTRACT_TITLE".localized(from: .module),
+                                                 items: viewModel.extractVideos,
+                                                 type: .fourColumns) { videoStreamID in
+                                        VideoPlayerView(streamID: videoStreamID)
+                                    }
+                                    
+                                    CarouselView(title: "TYPE_EXCLU_TITLE".localized(from: .module),
+                                                 items: viewModel.excluVideos,
+                                                 type: .fourColumns) { videoStreamID in
+                                        VideoPlayerView(streamID: videoStreamID)
+                                    }
                                 }
                                 .padding(.top, 30)
                                 .background(backgroundBlur)
@@ -42,7 +56,7 @@ struct ProgramDetailsView: View {
     }
 }
 
-private extension ProgramDetailsView {
+private extension TF1ProgramDetailsView {
     @ViewBuilder var backgroundImage: some View {
         if let url = viewModel.backgroundURL {
             AsyncImage(url: url)

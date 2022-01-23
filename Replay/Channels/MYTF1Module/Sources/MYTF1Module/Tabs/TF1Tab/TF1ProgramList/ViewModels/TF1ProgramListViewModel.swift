@@ -1,7 +1,7 @@
 import SwiftUI
 import RPCoreModule
 
-class TF1TabViewModel: ObservableObject, LoadableViewModel {
+class TF1ProgramListViewModel: ObservableObject, LoadableViewModel {
     @Published var state: ViewModelState = .success
     
     @Published var seriesAndFictionsPrograms: [Program] = []

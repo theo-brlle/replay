@@ -1,7 +1,7 @@
 import SwiftUI
 import RPCoreModule
 
-class ProgramDetailsViewModel: ObservableObject, LoadableViewModel {
+class TF1ProgramDetailsViewModel: ObservableObject, LoadableViewModel {
     @Published var state: ViewModelState = .success
     
     @Published var backgroundURL: URL?// = URL(string: "https://photos.tf1.fr/1920/1080/cover-showpage-404e38-06b00e-0@1x.jpg")
