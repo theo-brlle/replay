@@ -1,5 +1,5 @@
 import SwiftUI
-import RPCoreModule
+import CoreModule
 
 public struct MYTF1RootView: View {
     public init() {}

@@ -1,4 +1,4 @@
-import RPUIModule
+import UIModule
 
 extension Program: CarouselItemRepresentable {
     var title: String {

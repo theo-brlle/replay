@@ -1,4 +1,4 @@
-import RPUIModule
+import UIModule
 
 extension Video: CarouselItemRepresentable {
     var remoteID: String {

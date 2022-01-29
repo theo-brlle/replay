@@ -1,3 +1,3 @@
-# RPUIModule
+# CoreModule
 
 A description of this package.

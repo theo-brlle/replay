@@ -1,5 +1,5 @@
-import RPCoreModule
-import RPUIModule
+import CoreModule
+import UIModule
 
 extension ViewModelState: ViewStateRepresentable {
     public var isSuccess: Bool {

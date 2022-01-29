@@ -1,11 +1,11 @@
 import XCTest
-@testable import RPUIModule
+@testable import UIModule
 
-final class RPUIModuleTests: XCTestCase {
+final class UIModuleTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(RPUIModule().text, "Hello, World!")
+        XCTAssertEqual(UIModule().text, "Hello, World!")
     }
 }

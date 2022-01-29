@@ -1,5 +1,5 @@
 import SwiftUI
-import RPCoreModule
+import CoreModule
 
 class TF1ProgramDetailsViewModel: ObservableObject, LoadableViewModel {
     @Published var state: ViewModelState = .success

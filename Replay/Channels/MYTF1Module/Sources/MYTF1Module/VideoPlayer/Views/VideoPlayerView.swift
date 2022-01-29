@@ -1,7 +1,7 @@
 import SwiftUI
 import AVKit
-import RPCoreModule
-import RPUIModule
+import CoreModule
+import UIModule
 
 struct VideoPlayerView: View {
     @StateObject var viewModel: VideoPlayerViewModel

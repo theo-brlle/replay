@@ -1,6 +1,6 @@
 import SwiftUI
-import RPCoreModule
-import RPUIModule
+import CoreModule
+import UIModule
 
 struct TF1ProgramListView: View {
     @StateObject var viewModel = TF1ProgramListViewModel()

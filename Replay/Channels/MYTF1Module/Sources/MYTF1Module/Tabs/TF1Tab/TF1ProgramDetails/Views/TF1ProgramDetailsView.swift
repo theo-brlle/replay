@@ -1,6 +1,6 @@
 import SwiftUI
-import RPCoreModule
-import RPUIModule
+import CoreModule
+import UIModule
 
 struct TF1ProgramDetailsView: View {
     @Environment(\.colorScheme) var colorScheme

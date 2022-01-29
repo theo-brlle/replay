@@ -16,8 +16,8 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(name: "RPCoreModule", path: "../RPCoreModule"),
-        .package(name: "RPUIModule", path: "../RPUIModule")
+        .package(name: "CoreModule", path: "../CoreModule"),
+        .package(name: "UIModule", path: "../UIModule")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -25,8 +25,8 @@ let package = Package(
         .target(
             name: "MYTF1Module",
             dependencies: [
-                "RPCoreModule",
-                "RPUIModule"
+                "CoreModule",
+                "UIModule"
             ]),
         .testTarget(
             name: "MYTF1ModuleTests",

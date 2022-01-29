@@ -1,11 +1,11 @@
 import XCTest
-@testable import RPCoreModule
+@testable import CoreModule
 
-final class RPCoreModuleTests: XCTestCase {
+final class CoreModuleTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(RPCoreModule().text, "Hello, World!")
+        XCTAssertEqual(CoreModule().text, "Hello, World!")
     }
 }
