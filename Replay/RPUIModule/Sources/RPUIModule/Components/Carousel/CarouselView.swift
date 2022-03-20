@@ -4,6 +4,13 @@ public protocol CarouselItemRepresentable: Identifiable {
     var remoteID: String { get }
     var title: String { get }
     var thumbnailURL: URL? { get }
+    var isDotPresented: Bool { get }
+}
+
+public extension CarouselItemRepresentable {
+    var isDotPresented: Bool {
+        return false
+    }
 }
 
 public enum CarouselType {
@@ -56,8 +63,20 @@ public struct CarouselView<Item: CarouselItemRepresentable, Content: View>: View
                     ForEach(self.items) { carouselItem in
                         NavigationLink {
                             content(carouselItem.remoteID)
+                                .onAppear {
+                                    guard var seenPrograms = UserDefaults.standard.array(forKey: "seen-programs") else {
+                                        UserDefaults.standard.set([carouselItem.remoteID], forKey: "seen-programs")
+                                        return
+                                    }
+                                    
+                                    seenPrograms.append(carouselItem.remoteID)
+                                    
+                                    UserDefaults.standard.removeObject(forKey: "seen-programs")
+                                    UserDefaults.standard.set(seenPrograms, forKey: "seen-programs")
+                                }
                         } label: {
-                            CarouselItemView(thumbnailURL: carouselItem.thumbnailURL)
+                            CarouselItemView(thumbnailURL: carouselItem.thumbnailURL,
+                                             isDotPresented: carouselItem.isDotPresented)
                                 .frame(width: self.type.unfocusedItemWidth, height: self.type.unfocusedItemHeight)
                         }
                         .buttonStyle(.card)
