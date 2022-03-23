@@ -4,10 +4,25 @@ import RPCoreModule
 class TF1TabViewModel: ObservableObject, LoadableViewModel {
     @Published var state: ViewModelState = .success
     
+    @Published var currentlyLiveBannerURL: URL?
     @Published var seriesAndFictionsPrograms: [Program] = []
     @Published var entertainementPrograms: [Program] = []
     @Published var infosMagazineSportsPrograms: [Program] = []
     @Published var youthPrograms: [Program] = []
+    
+    @MainActor func getCurrentlyLiveBannerURL() async {
+        do {
+            self.state = .loading
+            let request = try GetCurrentlyLiveBannerRequest()
+            let urlData = try await request.perform()
+            
+            self.currentlyLiveBannerURL = URL(string: urlData.media.preview)
+            
+            self.state = .success
+        } catch {
+            self.state = .failure(error)
+        }
+    }
 
     @MainActor func getSeriesAndFictionsPrograms() async {
         do {
