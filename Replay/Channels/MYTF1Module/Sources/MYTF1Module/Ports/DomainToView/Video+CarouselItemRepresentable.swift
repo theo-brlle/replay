@@ -8,4 +8,8 @@ extension Video: CarouselItemRepresentable {
     var title: String {
         "ToDo"
     }
+    
+    var isDotPresented: Bool {
+        return isAlreadySeen
+    }
 }
